@@ -1,5 +1,5 @@
 # TicTacToe-JS
-
+## Run 'index.html' in a browser to start.
 MIT License
 
 Copyright (c) 2022 lukkasz323

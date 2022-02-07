@@ -25,7 +25,7 @@ function checkGameOver() {
         moves = 0; // Reset to prevent draw on last chance win
         gameOver(1);
     }
-    check(0, 1, 2); // Check all (8) possible combinations for win
+    check(0, 1, 2); // Check all (8) possible combinations for a win
     check(3, 4, 5);
     check(6, 7, 8);
     check(0, 3, 6);

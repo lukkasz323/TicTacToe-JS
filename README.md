@@ -1,3 +1,5 @@
+# TicTacToe-JS
+
 MIT License
 
 Copyright (c) 2022 lukkasz323

@@ -22,6 +22,7 @@ function checkGameOver() {
         if (grid[a] !== grid[b]) return;
         if (grid[a] !== grid[c]) return;
         if (grid[a] == null && grid[b] == null && grid[c] == null) return;
+		
         moves = 0; // Reset to prevent draw on last chance win
         gameOver(1);
     }

@@ -1,0 +1,38 @@
+html, body {
+    height: 100%;
+    margin: auto;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+#game {
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    width: 50vmin;
+    height: 50vmin;
+    position: absolute;
+    top: 15vmin;
+    background-color: gray;
+}
+
+#winner {
+    position: absolute;
+    top: 65vmin;
+}
+
+#header {
+    position: absolute;
+    top: 0;
+}
+
+#footer {
+    position: absolute;
+    bottom: 1vmin;
+    text-align: center;
+}

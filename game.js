@@ -53,6 +53,12 @@ function gameOver(status) {
     }
 }
 
+function addListenerFields() {
+    for (let i = 0; i <= 8; i++) {
+        buttons[i].addEventListener('click', logClickField);
+    }
+}
+
 function logClickField(e) {
     id = e.target.id;
 
@@ -66,10 +72,15 @@ function logClickField(e) {
 }
 
 function logClickRefresh(e) {
-    location.reload();
+    grid = Array(9);
+    plr = 'X';
+    moves = 0;
+    winner.innerHTML = '';
+    for (let i = 0; i <= 8; i++) {
+        buttons[i].value = '';
+    }
+    addListenerFields();
 }
 
-for (let i = 0; i <= 8; i++) {
-    buttons[i].addEventListener('click', logClickField);
-}
+addListenerFields();
 refresh.addEventListener('click', logClickRefresh)

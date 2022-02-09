@@ -1,7 +1,8 @@
 'use strict';
 
 const winner = document.getElementById('winner');
-const buttons = document.querySelectorAll('input'); 
+const buttons = document.getElementsByClassName('field');
+const refresh = document.getElementById('refresh');
 let plr = 'X';
 let grid = Array(9);
 let id;
@@ -48,11 +49,11 @@ function gameOver(status) {
             winner.innerHTML = "'" + plr + "' wins!";
     }
     for (let i = 0; i <= 8; i++) {
-        buttons[i].removeEventListener('click', logClick);
+        buttons[i].removeEventListener('click', logClickField);
     }
 }
 
-function logClick(e) {
+function logClickField(e) {
     id = e.target.id;
 
     if (grid[id] == null) {
@@ -64,6 +65,11 @@ function logClick(e) {
     }
 }
 
-for (let i = 0; i <= 8; i++) {
-    buttons[i].addEventListener('click', logClick);
+function logClickRefresh(e) {
+    location.reload();
 }
+
+for (let i = 0; i <= 8; i++) {
+    buttons[i].addEventListener('click', logClickField);
+}
+refresh.addEventListener('click', logClickRefresh)

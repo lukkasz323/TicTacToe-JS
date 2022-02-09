@@ -26,6 +26,11 @@ html, body {
     top: 65vmin;
 }
 
+#refresh {
+    position: absolute;
+    top: 80vmin;
+}
+
 #header {
     position: absolute;
     top: 0;
